@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.zx.common.Result;
 import com.zx.service.IStudentService;
 import com.zx.service.impl.StudentServiceImpl;
 
@@ -61,14 +62,14 @@ public class StudentController extends HttpServlet{
 		 * 2. use student service to add info
 		 */
 		Map<String, String> params = reqParam(req);
-		stuService.add(params.get("studentNumber"),
+		Result rs = stuService.add(params.get("studentNumber"),
 						params.get("name"),
 						params.get("age"),
 						params.get("sex"),
 						params.get("phone"),
 						params.get("city"),
 						params.get("info"));
-		
+		RespWriter.
 		
 	}
 	
