@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.zx.common.Result;
 import com.zx.service.IStudentService;
 import com.zx.service.impl.StudentServiceImpl;
+import com.zx.util.RespWriter;
 
 
 @WebServlet("/student.do")
@@ -69,7 +70,7 @@ public class StudentController extends HttpServlet{
 						params.get("phone"),
 						params.get("city"),
 						params.get("info"));
-		RespWriter.
+		RespWriter.writerJson(resp, rs);
 		
 	}
 	

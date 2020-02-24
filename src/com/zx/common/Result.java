@@ -52,7 +52,4 @@ public class Result {
 	public void setData(Object data) {
 		this.data = data;
 	}
-	
-	
-	
 }
